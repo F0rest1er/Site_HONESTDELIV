@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HonestDeliv</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo.png" alt="HonestDeliv" />
+        </div>
+      </div>
+    </header>
+
+    <section class="intro">
+      <div class="container">
+        <h2>
+          HONESTDELIV компания по заказу и доставке товаров из США. Только
+          проверенные продавцы и оригинальные товары.
+        </h2>
+        <button>Заказать</button>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2>О нашей компании</h2>
+        <p>
+          Мы продолжаем привозить бренды, которые пропали из Российских
+          магазинов Через нашу компанию вы можете заказать одежду , обувь ,
+          сумки и многое другое(кроме медикаментов и техники) Цены ниже, чем в
+          любом другом магазине.Наша компания не работает с перекупщиками. Мы
+          выкупаем вещи напрямую из магазинов США. БЕЗ накрутки цен.
+          Сотрудничаем только с : Amazon(онлайн платформа) и Официальными
+          оффлайн магазинами.
+        </p>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2>Наши услуги</h2>
+        <div class="service-items">
+          <div class="service-item">
+            <img src="img/ico1.svg" alt="Service 1" />
+            <p>
+              1. Для заказа можете прислать ссылку нужного вам товара с сайта
+              Amazon.com или официальных оффлайн магазинов США.
+            </p>
+          </div>
+          <div class="service-item">
+            <img src="img/ico2.svg" alt="Service 2" />
+            <p>
+              2. Мы ищем для вас нужный товар по самой низкой цене. Поиск товара
+              БЕСПЛАТНЫЙ.
+            </p>
+          </div>
+          <div class="service-item">
+            <img src="img/ico3.svg" alt="Service 3" />
+            <p>
+              3. Делаем фото и видео вашего товара , чтобы вы могли насладиться
+              его качеством.
+            </p>
+          </div>
+          <br />
+          <div class="service-item">
+            <img src="img/ico4.svg" alt="Service 4" />
+            <p>
+              4. Вы производите оплату стоимости товара, налога и услугу по
+              выкупу товара. После мы отправляем вашу посылку в Россию на пункт
+              выдачи.
+            </p>
+          </div>
+          <div class="service-item">
+            <img src="img/ico5.svg" alt="Service 5" />
+            <p>
+              5. Всегда в короткие сроки выходим на связь , чтобы ответить на
+              интересующие вас вопросы.
+            </p>
+          </div>
+          <div class="service-item">
+            <img src="img/ico6.svg" alt="Service 6" />
+            <p>
+              6. Стоимость услуги выкупа товаров 2000 рублей (фиксированная).
+              Отдельно считается цена товара (как в магазине) и стоимость
+              доставки (зависит от веса посылки).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages">
+      <div class="container">
+        <h2>Преимущества компании</h2>
+        <ul>
+          <li>Безопасная и быстрая доставка</li>
+          <li>Низкие тарифы и отсутствие скрытых комиссий</li>
+          <li>Поддержка клиентов 24/7</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2>Отзывы наших клиентов</h2>
+        <div class="testimonial-items">
+          <div class="testimonial-item">
+            <img src="client1.jpg" alt="Client 1" />
+            <p>Отличный сервис Буду заказывать еще.</p>
+            <h3>Иван Иванов</h3>
+          </div>
+          <div class="testimonial-item">
+            <img src="client2.jpg" alt="Client 2" />
+            <p>Все пришло в срок, большое спасибо!</p>
+            <h3>Анна Смирнова</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order">
+      <div class="container">
+        <h2>Оформление заказа</h2>
+        <form action="submit_order.php" method="post">
+          <input type="text" name="name" placeholder="Ваше имя" />
+          <input type="email" name="email" placeholder="Ваш email" />
+          <input type="tel" name="phone" placeholder="Ваш телефон" />
+          <textarea name="message" placeholder="Ваше сообщение"></textarea>
+          <input type="checkbox" name="agree" id="agree" />
+          <label for="agree"
+            >Я согласен на обработку моих персональных данных</label
+          >
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>Контакты</p>
+        <p>Тел: +7-928-146-22-42</p>
+        <p>Email: buyer.usa@yandex.ru</p>
+        <div class="social-links">
+          <a href="#"><img src="vk.png" alt="VK" /></a>
+          <a href="#"><img src="facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

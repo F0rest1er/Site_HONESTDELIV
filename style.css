@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background: black;
+  color: #fff;
+  padding-top: 10px;
+  min-height: 70px;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header ul {
+  padding: 0;
+  list-style: none;
+}
+
+header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header .logo {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+.intro {
+  background: url("img/bg.png") no-repeat center center/cover;
+  color: #fff;
+  height: 300px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.intro h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.intro button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background: #ff4500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.intro button:hover {
+  background: #333;
+}
+
+.about,
+.services,
+.advantages,
+.testimonials,
+.order {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.about h2,
+.services h2,
+.advantages h2,
+.testimonials h2,
+.order h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.services .service-items,
+.testimonials .testimonial-items {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.services .service-item,
+.testimonials .testimonial-item {
+  width: 30%;
+}
+
+.services .service-item img,
+.testimonials .testimonial-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.advantages ul {
+  list-style: none;
+  text-align: left;
+}
+
+.advantages ul li {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.order form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order form input,
+.order form button,
+.order form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  width: 300px;
+}
+
+.order form button {
+  background: #ff4500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.order form button:hover {
+  background: black;
+}
+
+footer {
+  background: black;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p,
+.social-links a {
+  margin: 10px 0;
+}
+
+footer .social-links img {
+  width: 30px;
+  height: 30px;
+}
+
+.order form input[type="checkbox"] {
+  display: none;
+}
+
+.order form input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.order form input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ff4500;
+  border-radius: 3px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.order form input[type="checkbox"]:checked + label:before {
+  background-color: #ff4500;
+}
+
+.order form input[type="checkbox"]:checked + label:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-65%) rotate(45deg);
+}
+
+.order form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  header nav {
+    float: none;
+  }
+
+  header ul {
+    padding: 10px 0;
+  }
+
+  header li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .intro {
+    padding-top: 50px;
+    height: 200px;
+  }
+
+  .services .service-items,
+  .testimonials .testimonial-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services .service-item,
+  .testimonials .testimonial-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .order form input,
+  .order form button {
+    width: 100%;
+  }
+}
