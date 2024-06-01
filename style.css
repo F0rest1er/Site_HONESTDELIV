@@ -68,19 +68,6 @@ header nav {
   margin-bottom: 20px;
 }
 
-.intro button {
-  font-size: 16px;
-  padding: 10px 20px;
-  background: #ff4500;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.intro button:hover {
-  background: #333;
-}
-
 .about,
 .services,
 .advantages,
@@ -99,19 +86,34 @@ header nav {
   margin-bottom: 20px;
 }
 
-.services .service-items,
+.services .service-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.services .service-item {
+  width: 100%;
+}
+
+.services .service-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
 .testimonials .testimonial-items {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
 }
 
-.services .service-item,
 .testimonials .testimonial-item {
   width: 30%;
 }
 
-.services .service-item img,
 .testimonials .testimonial-item img {
   width: 100px;
   height: 100px;
@@ -135,14 +137,20 @@ header nav {
 }
 
 .order form input,
-.order form button,
 .order form textarea {
   padding: 10px;
   margin: 10px 0;
   width: 300px;
 }
 
+.order form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
 .order form button {
+  padding: 10px 20px;
+  margin: 10px 0;
   background: #ff4500;
   color: #fff;
   border: none;
@@ -170,54 +178,40 @@ footer .social-links img {
   height: 30px;
 }
 
-.order form input[type="checkbox"] {
-  display: none;
+.order .agree-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
 }
 
-.order form input[type="checkbox"] + label {
-  display: inline-block;
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 24px;
+.order .agree-container input[type="checkbox"] {
+  margin-right: 5px;
 }
 
-.order form input[type="checkbox"] + label:before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #ff4500;
-  border-radius: 3px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.order .agree-container label {
+  font-size: 14px;
+  text-align: left;
 }
 
-.order form input[type="checkbox"]:checked + label:before {
-  background-color: #ff4500;
-}
-
-.order form input[type="checkbox"]:checked + label:after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 15px;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-  position: absolute;
-  left: 5px;
-  top: 50%;
-  transform: translateY(-65%) rotate(45deg);
+.order .agree-container label a {
+  color: #ff4500;
+  text-decoration: none;
 }
 
 .order form button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
-
+.policy {
+  margin-top: 5px;
+  margin-left: 450px;
+  margin-bottom: 5px;
+  width: 800px;
+  text-align: justify;
+}
+.policy p {
+  font-size: 18px;
+}
 /* Мобильная адаптация */
 @media (max-width: 768px) {
   .container {
@@ -247,20 +241,23 @@ footer .social-links img {
     height: 200px;
   }
 
-  .services .service-items,
+  .services .service-items {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
   .testimonials .testimonial-items {
     flex-direction: column;
     align-items: center;
   }
 
-  .services .service-item,
   .testimonials .testimonial-item {
     width: 80%;
     margin-bottom: 20px;
   }
 
   .order form input,
-  .order form button {
+  .order form textarea {
     width: 100%;
   }
 }

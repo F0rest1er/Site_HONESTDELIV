@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HONESTDELIV</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/ico.ico" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo.png" alt="HDLOGO" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="shop.html">Товары</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="order">
+      <div class="container">
+        <h2>Оформление заказа</h2>
+        <form action="submit_order.php" method="post">
+          <input type="text" name="name" placeholder="Ваше имя" />
+          <input type="email" name="email" placeholder="Ваш email" />
+          <input type="tel" name="phone" placeholder="Ваш телефон" />
+          <textarea name="message" placeholder="Ваше сообщение"></textarea>
+          <div class="agree-container">
+            <input type="checkbox" name="agree" id="agree" />
+            <label for="agree">
+              Я согласен на обработку моих персональных данных
+              <a href="policy1.html" target="_blank">
+                (Политика конфиденциальности)
+              </a>
+            </label>
+          </div>
+          <button type="submit" id="submit-btn" disabled>Отправить</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>Контакты</p>
+        <p>Тел: +7-928-146-22-42</p>
+        <p>Email: buyer.usa@yandex.ru</p>
+        <div class="social-links">
+          <a href="https://t.me/honestdeliv"
+            ><img src="img/tg.png" alt="TG"
+          /></a>
+          <a href="https://wa.me/79281462242"
+            ><img src="img/wa.ico" alt="WA"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const submitBtn = document.getElementById("submit-btn");
+      const agreeCheckbox = document.getElementById("agree");
+
+      agreeCheckbox.addEventListener("change", function () {
+        submitBtn.disabled = !this.checked;
+      });
+    </script>
+  </body>
+</html>

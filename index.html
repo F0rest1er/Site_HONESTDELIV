@@ -3,15 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HonestDeliv</title>
+    <title>HONESTDELIV</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/ico.ico" />
   </head>
   <body>
     <header>
       <div class="container">
         <div class="logo">
-          <img src="img/logo.png" alt="HonestDeliv" />
+          <img src="img/logo.png" alt="HDLOGO" />
         </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="shop.html">Товары</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -21,7 +28,6 @@
           HONESTDELIV компания по заказу и доставке товаров из США. Только
           проверенные продавцы и оригинальные товары.
         </h2>
-        <button>Заказать</button>
       </div>
     </section>
 
@@ -30,12 +36,12 @@
         <h2>О нашей компании</h2>
         <p>
           Мы продолжаем привозить бренды, которые пропали из Российских
-          магазинов Через нашу компанию вы можете заказать одежду , обувь ,
-          сумки и многое другое(кроме медикаментов и техники) Цены ниже, чем в
-          любом другом магазине.Наша компания не работает с перекупщиками. Мы
+          магазинов. Через нашу компанию вы можете заказать одежду, обувь, сумки
+          и многое другое(кроме медикаментов и техники). Цены ниже, чем в любом
+          другом магазине. Наша компания не работает с перекупщиками. Мы
           выкупаем вещи напрямую из магазинов США. БЕЗ накрутки цен.
-          Сотрудничаем только с : Amazon(онлайн платформа) и Официальными
-          оффлайн магазинами.
+          Сотрудничаем только с Amazon (онлайн платформа) и официальными оффлайн
+          магазинами.
         </p>
       </div>
     </section>
@@ -45,29 +51,28 @@
         <h2>Наши услуги</h2>
         <div class="service-items">
           <div class="service-item">
-            <img src="img/ico1.svg" alt="Service 1" />
+            <img src="img/ico1.ico" alt="Service 1" />
             <p>
               1. Для заказа можете прислать ссылку нужного вам товара с сайта
               Amazon.com или официальных оффлайн магазинов США.
             </p>
           </div>
           <div class="service-item">
-            <img src="img/ico2.svg" alt="Service 2" />
+            <img src="img/ico2.ico" alt="Service 2" />
             <p>
               2. Мы ищем для вас нужный товар по самой низкой цене. Поиск товара
               БЕСПЛАТНЫЙ.
             </p>
           </div>
           <div class="service-item">
-            <img src="img/ico3.svg" alt="Service 3" />
+            <img src="img/ico3.ico" alt="Service 3" />
             <p>
-              3. Делаем фото и видео вашего товара , чтобы вы могли насладиться
+              3. Делаем фото и видео вашего товара, чтобы вы могли насладиться
               его качеством.
             </p>
           </div>
-          <br />
           <div class="service-item">
-            <img src="img/ico4.svg" alt="Service 4" />
+            <img src="img/ico4.ico" alt="Service 4" />
             <p>
               4. Вы производите оплату стоимости товара, налога и услугу по
               выкупу товара. После мы отправляем вашу посылку в Россию на пункт
@@ -75,14 +80,14 @@
             </p>
           </div>
           <div class="service-item">
-            <img src="img/ico5.svg" alt="Service 5" />
+            <img src="img/ico5.ico" alt="Service 5" />
             <p>
-              5. Всегда в короткие сроки выходим на связь , чтобы ответить на
+              5. Всегда в короткие сроки выходим на связь, чтобы ответить на
               интересующие вас вопросы.
             </p>
           </div>
           <div class="service-item">
-            <img src="img/ico6.svg" alt="Service 6" />
+            <img src="img/ico6.ico" alt="Service 6" />
             <p>
               6. Стоимость услуги выкупа товаров 2000 рублей (фиксированная).
               Отдельно считается цена товара (как в магазине) и стоимость
@@ -130,11 +135,16 @@
           <input type="email" name="email" placeholder="Ваш email" />
           <input type="tel" name="phone" placeholder="Ваш телефон" />
           <textarea name="message" placeholder="Ваше сообщение"></textarea>
-          <input type="checkbox" name="agree" id="agree" />
-          <label for="agree"
-            >Я согласен на обработку моих персональных данных</label
-          >
-          <button type="submit">Отправить</button>
+          <div class="agree-container">
+            <input type="checkbox" name="agree" id="agree" />
+            <label for="agree">
+              Я согласен на обработку моих персональных данных
+              <a href="policy1.html" target="_blank">
+                (Политика конфиденциальности)
+              </a>
+            </label>
+          </div>
+          <button type="submit" id="submit-btn" disabled>Отправить</button>
         </form>
       </div>
     </section>
@@ -145,11 +155,23 @@
         <p>Тел: +7-928-146-22-42</p>
         <p>Email: buyer.usa@yandex.ru</p>
         <div class="social-links">
-          <a href="#"><img src="vk.png" alt="VK" /></a>
-          <a href="#"><img src="facebook.png" alt="Facebook" /></a>
-          <a href="#"><img src="instagram.png" alt="Instagram" /></a>
+          <a href="https://t.me/honestdeliv"
+            ><img src="img/tg.png" alt="TG"
+          /></a>
+          <a href="https://wa.me/79281462242"
+            ><img src="img/wa.ico" alt="WA"
+          /></a>
         </div>
       </div>
     </footer>
+
+    <script>
+      const submitBtn = document.getElementById("submit-btn");
+      const agreeCheckbox = document.getElementById("agree");
+
+      agreeCheckbox.addEventListener("change", function () {
+        submitBtn.disabled = !this.checked;
+      });
+    </script>
   </body>
 </html>
